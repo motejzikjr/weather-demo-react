@@ -1,5 +1,5 @@
 import { weatherApi } from "../../api/openMeteoClient";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { toCurrentWeather } from "../mappers/toCurrentWeather";
 import { toDailyForecast } from "../mappers/toDailyForecast";
 import { WeatherResponse } from "../types/WeatherResponse";
@@ -18,7 +18,7 @@ export const useWeather = () => {
     const [error, setError] = useState<Error | null>(null)
     const { updateCurrentTemperature } = useWeatherStore()
 
-    const getWeather = async () => {
+    const getWeather = useCallback(async () => {
         setIsLoading(true)
         setError(null)
 
@@ -47,11 +47,11 @@ export const useWeather = () => {
         } finally {
             setIsLoading(false)
         }
-    }
+    }, [updateCurrentTemperature])
 
     useEffect(() => {
         getWeather().catch(console.error)
-    }, [])
+    }, [getWeather])
 
     return {
         weather,
