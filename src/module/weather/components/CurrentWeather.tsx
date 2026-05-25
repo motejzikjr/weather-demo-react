@@ -1,6 +1,8 @@
 import { MdRefresh } from 'react-icons/md'
 import { format, parseISO } from 'date-fns'
 import { CurrentWeather as CurrentWeatherType } from '../types/CurrentWeather'
+import { Button } from '~/ui/Button/Button'
+import { ButtonVariant } from '~/ui/Button/ButtonVariant'
 
 interface Props {
   current: CurrentWeatherType
@@ -16,13 +18,11 @@ export const CurrentWeather = ({ current, onRefresh }: Props) => {
         </p>
         <p className="text-sm">Aktuální teplota: {current.temperature}°C</p>
         <p className="text-sm">Rychlost větru: {current.windSpeed} km/h</p>
-        <button
-          onClick={onRefresh}
-          className="mt-2 flex items-center gap-1 px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm cursor-pointer"
-        >
+
+        <Button onClick={onRefresh} variant={ButtonVariant.PRIMARY}>
           <MdRefresh className="text-base" />
           Obnovit
-        </button>
+        </Button>
       </div>
     </div>
   )

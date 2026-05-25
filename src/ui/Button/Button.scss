@@ -1,0 +1,36 @@
+@use '~/styles/settings/colors' as *;
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem;
+  border: 2px solid;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.Button--primary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-hover;
+    color: $color-black;
+  }
+}
+
+.Button--secondary {
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary-hover;
+  }
+}

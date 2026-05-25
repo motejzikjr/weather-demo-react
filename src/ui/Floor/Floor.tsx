@@ -10,10 +10,10 @@ interface FloorProps {
 
 export function Floor({ variant, children }: FloorProps) {
   return (
-    <div className={`Floor ${variant}`}>
+    <section className={`Floor ${variant}`}>
       <FloorContainer>
         {children}
       </FloorContainer>
-    </div>
+    </section>
   )
 }
