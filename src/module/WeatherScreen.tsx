@@ -2,6 +2,8 @@ import { CurrentWeather } from './weather/components/CurrentWeather'
 import { DailyForecast } from './weather/components/DailyForecast'
 import { Charts } from './weather/components/Charts'
 import { useWeather } from './weather/hooks/useWeather'
+import { Floor } from '~/ui/Floor/Floor'
+import { FloorVariant } from '~/ui/Floor/FloorVariant'
 
 export function WeatherScreen() {
   const { weather, isLoading, error, refresh } = useWeather()
@@ -11,10 +13,16 @@ export function WeatherScreen() {
   if (!weather) return null
 
   return (
-    <div className="container mx-auto px-4 py-6">
-      <CurrentWeather current={weather.current} onRefresh={refresh} />
-      <DailyForecast forecast={weather.forecast} />
-      <Charts forecast={weather.forecast} />
-    </div>
+    <>
+      <Floor variant={FloorVariant.SECONDARY}>
+        <CurrentWeather current={weather.current} onRefresh={refresh} />
+      </Floor>
+      <Floor variant={FloorVariant.SECONDARY}>
+        <DailyForecast forecast={weather.forecast} />
+      </Floor>
+      <Floor variant={FloorVariant.PRIMARY}>
+        <Charts forecast={weather.forecast} />
+      </Floor>
+    </>
   )
 }

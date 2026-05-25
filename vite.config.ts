@@ -8,4 +8,9 @@ export default defineConfig({
     tailwindcss(),
   ],
   base: process.env.VITE_BASE_URL ?? '/',
+  resolve: {
+    alias: {
+      '~': `${import.meta.dirname}/src`,
+    },
+  },
 })

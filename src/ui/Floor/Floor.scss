@@ -1,0 +1,24 @@
+@use '~/styles/settings/spacing' as *;
+
+.Floor {
+  min-width: 320px;
+  margin: auto;
+}
+
+.Floor--primary {
+  @include spacing-vertical-primary;
+
+  .Floor-container {
+    @include spacing-horizontal-primary;
+  }
+}
+
+.Floor--secondary {
+  @include spacing-vertical-secondary;
+
+  max-width: 1640px;
+
+  .Floor-container {
+    @include spacing-horizontal-secondary;
+  }
+}

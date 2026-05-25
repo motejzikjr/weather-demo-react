@@ -1,0 +1,23 @@
+@mixin spacing-vertical-primary {
+    padding: 0 2.5rem;
+}
+
+@mixin spacing-vertical-secondary {
+    padding: 0 1.5rem;
+}
+
+@mixin spacing-horizontal-primary {
+    padding: 2.5rem 0;
+}
+
+@mixin spacing-horizontal-secondary {
+    padding: 1.5rem 0;
+}
+
+@mixin spacing-inset-primary {
+    padding: 1rem;
+}
+
+@mixin spacing-inset-secondary {
+    padding: 0.5rem;
+}
