@@ -12,7 +12,7 @@ interface DailyWeatherCardProps {
 
 export function DailyWeatherCard({ day, onDetail }: DailyWeatherCardProps) {
   return (
-    <div className="DailyWeatherCard flex flex-col gap-3 p-4 bg-white rounded-xl shadow min-w-40">
+    <div className="DailyWeatherCard flex flex-col gap-3 p-4 bg-white rounded-xl shadow">
       <DailyWeatherCardDate date={day.date} />
       <DailyWeatherCardIcon code={day.code} />
       <DailyWeatherCardTemperature
