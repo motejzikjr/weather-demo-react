@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { weatherApi } from '~/module/api/openMeteoClient'
 import { MinutelyResponse } from '../types/MinutelyResponse'
+import { MinutelySummary } from '../types/MinutelySummary'
+import { toMinutelySummary } from '../mappers/toMinutelySummary'
 
 const MINUTELY_FIELDS = [
   'temperature_2m',
@@ -25,6 +27,7 @@ const MINUTELY_FIELDS = [
 
 export const useDayDetail = (date: string) => {
   const [data, setData] = useState<MinutelyResponse | null>(null)
+  const [summary, setSummary] = useState<MinutelySummary | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
 
@@ -43,6 +46,7 @@ export const useDayDetail = (date: string) => {
       })
 
       setData(response)
+      setSummary(toMinutelySummary(response))
     } catch (err) {
       if (err instanceof Error) {
         setError(err)
@@ -56,5 +60,5 @@ export const useDayDetail = (date: string) => {
     getDayDetail().catch(console.error)
   }, [getDayDetail])
 
-  return { data, isLoading, error }
+  return { data, summary, isLoading, error }
 }
