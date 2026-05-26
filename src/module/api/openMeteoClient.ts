@@ -11,7 +11,7 @@ export class ApiError extends Error {
     }
 }
 
-const get = async <T>(baseUrl: string, path: string, params?: Record<string, string | number>): Promise<T> => {
+const get = async <T>(baseUrl: string, path: string, params?: Record<string, string | number | string[]>): Promise<T> => {
     const url = new URL(`${baseUrl}/${path}`);
 
     if (params) {
@@ -30,11 +30,11 @@ const get = async <T>(baseUrl: string, path: string, params?: Record<string, str
 };
 
 export const weatherApi = {
-    get: <T>(path: string, params?: Record<string, string | number>) =>
+    get: <T>(path: string, params?: Record<string, string | number | string[]>) =>
         get<T>(WEATHER_BASE_URL, path, params),
 };
 
 export const geocodingApi = {
-    get: <T>(path: string, params?: Record<string, string | number>) =>
+    get: <T>(path: string, params?: Record<string, string | number | string[]>) =>
         get<T>(GEOCODING_BASE_URL, path, params),
 };
