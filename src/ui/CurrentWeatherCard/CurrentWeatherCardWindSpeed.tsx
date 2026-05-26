@@ -2,7 +2,7 @@ interface Props {
   windSpeed?: number
 }
 
-export function CurrentWeatherCardWindSpeed({ windSpeed }: Props) {
+export const CurrentWeatherCardWindSpeed = ({ windSpeed }: Props) => {
   return (
     <div className="CurrentWeatherCard-text CurrentWeatherCard-windSpeed">
       <span className="CurrentWeatherCard-label">Rychlost větru:</span>

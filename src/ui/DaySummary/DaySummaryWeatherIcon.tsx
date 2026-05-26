@@ -4,6 +4,6 @@ interface Props {
   code?: number
 }
 
-export function DaySummaryWeatherIcon({ code }: Props) {
+export const DaySummaryWeatherIcon = ({ code }: Props) => {
   return <WeatherIcon code={code} size={56} />
 }

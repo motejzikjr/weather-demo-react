@@ -4,7 +4,7 @@ interface Props {
   time?: string
 }
 
-export function CurrentWeatherCardTime({ time }: Props) {
+export const CurrentWeatherCardTime = ({ time }: Props) => {
   if (!time) return null
 
   return (

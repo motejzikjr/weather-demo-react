@@ -6,7 +6,7 @@ interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   variant: ButtonVariant
 }
 
-export function Button({ variant, children, ...props }: ButtonProps) {
+export const Button = ({ variant, children, ...props }: ButtonProps) => {
   return (
     <button className={`Button ${variant}`} {...props}>
       {children}

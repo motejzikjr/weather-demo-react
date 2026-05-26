@@ -10,7 +10,7 @@ interface DailyWeatherCardProps {
   onDetail: () => void
 }
 
-export function DailyWeatherCard({ day, onDetail }: DailyWeatherCardProps) {
+export const DailyWeatherCard = ({ day, onDetail }: DailyWeatherCardProps) => {
   return (
     <div className="DailyWeatherCard flex flex-col gap-3 p-4 bg-white rounded-xl shadow">
       <DailyWeatherCardDate date={day.date} />

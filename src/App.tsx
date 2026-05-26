@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from 'react-router'
 import { WeatherScreen } from './module/WeatherScreen'
 import { DayDetailScreen } from './module/DayDetailScreen'
 
-export default function App() {
+const App = () => {
   return (
     <Routes>
       <Route path="/weather" element={<WeatherScreen />} />
@@ -11,3 +11,5 @@ export default function App() {
     </Routes>
   )
 }
+
+export default App

@@ -6,7 +6,7 @@ interface Props {
   onRefresh: () => void
 }
 
-export function CurrentWeatherCardButton({ onRefresh }: Props) {
+export const CurrentWeatherCardButton = ({ onRefresh }: Props) => {
   return (
     <Button variant={ButtonVariant.PRIMARY} onClick={onRefresh}>
       <MdRefresh />

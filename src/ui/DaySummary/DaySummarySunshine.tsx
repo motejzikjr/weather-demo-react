@@ -2,7 +2,7 @@ interface Props {
   durationSeconds?: number
 }
 
-export function DaySummarySunshine({ durationSeconds }: Props) {
+export const DaySummarySunshine = ({ durationSeconds }: Props) => {
   const hours = durationSeconds !== undefined
     ? Math.floor(durationSeconds / 3600)
     : undefined

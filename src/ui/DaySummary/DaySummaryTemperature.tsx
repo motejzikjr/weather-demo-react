@@ -3,7 +3,7 @@ interface Props {
   max?: number
 }
 
-export function DaySummaryTemperature({ min, max }: Props) {
+export const DaySummaryTemperature = ({ min, max }: Props) => {
   return (
     <div className="DaySummary-temperature flex flex-col gap-1">
       <span className="DaySummary-label">Teplota</span>

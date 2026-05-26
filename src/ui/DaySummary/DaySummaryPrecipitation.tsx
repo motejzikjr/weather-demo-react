@@ -2,7 +2,7 @@ interface Props {
   total?: number
 }
 
-export function DaySummaryPrecipitation({ total }: Props) {
+export const DaySummaryPrecipitation = ({ total }: Props) => {
   return (
     <div className="DaySummary-precipitation flex flex-col gap-1">
       <span className="DaySummary-label">Srážky</span>

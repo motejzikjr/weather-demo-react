@@ -5,7 +5,7 @@ import { useWeather } from './weather/hooks/useWeather'
 import { Floor } from '~/ui/Floor/Floor'
 import { FloorVariant } from '~/ui/Floor/FloorVariant'
 
-export function WeatherScreen() {
+export const WeatherScreen = () => {
   const { weather, isLoading, error, refresh } = useWeather()
 
   if (isLoading) return <p className="p-4">Načítám počasí…</p>

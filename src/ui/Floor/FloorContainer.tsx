@@ -4,7 +4,7 @@ interface FloorContainerProps {
   children: ReactNode
 }
 
-export function FloorContainer({ children }: FloorContainerProps) {
+export const FloorContainer = ({ children }: FloorContainerProps) => {
   return (
     <div className="Floor-container flex flex-col gap-4">
       {children}

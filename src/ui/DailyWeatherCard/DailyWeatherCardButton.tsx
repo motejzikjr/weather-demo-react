@@ -5,7 +5,7 @@ interface Props {
   onDetail: () => void
 }
 
-export function DailyWeatherCardButton({ onDetail }: Props) {
+export const DailyWeatherCardButton = ({ onDetail }: Props) => {
   return (
     <Button variant={ButtonVariant.SECONDARY} onClick={onDetail}>
       Detail

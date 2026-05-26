@@ -4,7 +4,7 @@ interface Props {
   date?: string
 }
 
-export function DailyWeatherCardDate({ date }: Props) {
+export const DailyWeatherCardDate = ({ date }: Props) => {
   if (!date) return null
 
   return (

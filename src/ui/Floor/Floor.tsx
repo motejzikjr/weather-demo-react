@@ -8,7 +8,7 @@ interface FloorProps {
   children: ReactNode
 }
 
-export function Floor({ variant, children }: FloorProps) {
+export const Floor = ({ variant, children }: FloorProps) => {
   return (
     <section className={`Floor ${variant}`}>
       <FloorContainer>

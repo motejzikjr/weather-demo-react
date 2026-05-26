@@ -2,7 +2,7 @@ interface Props {
   temperature?: number
 }
 
-export function CurrentWeatherCardTemperature({ temperature }: Props) {
+export const CurrentWeatherCardTemperature = ({ temperature }: Props) => {
   return (
     <div className="CurrentWeatherCard-text CurrentWeatherCard-temperature">
       <span className="CurrentWeatherCard-label">Aktuální teplota:</span>
