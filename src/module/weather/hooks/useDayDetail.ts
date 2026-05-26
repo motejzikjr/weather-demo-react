@@ -10,22 +10,13 @@ import { toPrecipitationChart } from '../mappers/toPrecipitationChart'
 
 const MINUTELY_FIELDS = [
   'temperature_2m',
-  'relative_humidity_2m',
-  'dew_point_2m',
   'apparent_temperature',
+  'dew_point_2m',
   'precipitation',
   'rain',
   'snowfall',
-  'snowfall_height',
-  'freezing_level_height',
   'sunshine_duration',
   'weather_code',
-  'wind_speed_10m',
-  'wind_speed_80m',
-  'wind_direction_10m',
-  'wind_direction_80m',
-  'wind_gusts_10m',
-  'visibility',
   'is_day',
 ]
 
