@@ -17,20 +17,20 @@ src/module/geolocation/components/GeolocationSearch.tsx
 ## Akceptační kritéria
 
 ### Struktura
-- [ ] Soubor existuje na správné cestě
-- [ ] Arrow funkce, const export, žádné props
-- [ ] `npm run typecheck` hlásí 0 chyb
-- [ ] `npm run lint` hlásí 0 chyb
+- [x] Soubor existuje na správné cestě
+- [x] Arrow funkce, const export, žádné props
+- [x] `npm run typecheck` hlásí 0 chyb
+- [x] `npm run lint` hlásí 0 chyb
 
 ### Propojení s Autocomplete
-- [ ] Položky jsou mapovány ze `suggestions`: `{ name: "${s.name}, ${s.country}", value: JSON.stringify(s) }`
-- [ ] `onSelect` deserializuje hodnotu: `const suggestion = JSON.parse(value) as GeocodingSuggestion`
-- [ ] Po výběru je zavolán `setLocation(suggestion)` na store
+- [x] Položky jsou mapovány ze `suggestions`: `{ name: "${s.name}, ${s.country}", value: JSON.stringify(s) }`
+- [x] `onSelect` deserializuje hodnotu: `const suggestion = JSON.parse(value) as GeocodingSuggestion`
+- [x] Po výběru je zavolán `setLocation(suggestion)` na store
 
 ### Debounce
-- [ ] `onChange` inputu spustí `search(query)` až po 300ms od posledního stisku klávesy
-- [ ] Pokud uživatel během 300ms dál píše, předchozí timeout se resetuje
+- [x] `onChange` inputu spustí `search(query)` až po 300ms od posledního stisku klávesy
+- [x] Pokud uživatel během 300ms dál píše, předchozí timeout se resetuje
 
 ### Zobrazení
-- [ ] Pod inputem je zobrazena aktuálně vybraná lokace ze store: `{location.name}, {location.country}`
-- [ ] Při prázdném výsledku vyhledávání zobrazí Autocomplete zprávu (výchozí `emptyMessage`)
+- [x] Pod inputem je zobrazena aktuálně vybraná lokace ze store: `{location.name}, {location.country}`
+- [x] Při prázdném výsledku vyhledávání zobrazí Autocomplete zprávu (výchozí `emptyMessage`)
