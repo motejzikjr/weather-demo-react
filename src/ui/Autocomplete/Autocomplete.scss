@@ -1,0 +1,38 @@
+@use '~/styles/settings/colors' as *;
+
+.Autocomplete {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.AutocompleteList {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  border: 2px solid $color-primary;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.AutocompleteList-empty {
+  padding: 0.5rem 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.875rem;
+}
+
+.AutocompleteItem {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+
+  &--highlighted {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
