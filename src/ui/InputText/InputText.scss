@@ -1,0 +1,21 @@
+@use '~/styles/settings/colors' as *;
+
+.InputText {
+  padding: 0.5rem 1rem;
+  border: 2px solid $color-primary;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary-hover;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
