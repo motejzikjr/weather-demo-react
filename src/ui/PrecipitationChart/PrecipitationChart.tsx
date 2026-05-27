@@ -8,20 +8,18 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
+import type { Formatter } from 'recharts/types/component/DefaultTooltipContent'
 import type { PrecipitationChartPoint } from '~/module/weather/types/PrecipitationChartPoint'
 
 interface PrecipitationChartProps {
   data: PrecipitationChartPoint[]
 }
 
-const formatTooltip = (
-  value: string | number | (string | number)[] | undefined,
-  name: string | number,
-): [string, string] => {
+const formatTooltip: Formatter = (value, name) => {
   const v = value != null ? `${value}` : '—'
-  if (name === 'Déšť') return [`${v} mm`, String(name)]
-  if (name === 'Sníh') return [`${v} cm`, String(name)]
-  return [v, String(name)]
+  if (name === 'Déšť') return [`${v} mm`, name]
+  if (name === 'Sníh') return [`${v} cm`, name]
+  return [v, name as string]
 }
 
 export const PrecipitationChart = ({ data }: PrecipitationChartProps) => {
