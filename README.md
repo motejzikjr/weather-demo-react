@@ -66,6 +66,12 @@ src/
   utils/                           # formatDate, formatDateTime
 ```
 
+## AI-asistovaný vývoj
+
+Modul `geolocation` byl implementován pomocí [Claude Code](https://claude.ai/code) na základě strukturovaných task souborů s definovanými akceptačními kritérii. Každý subtask popisoval cíl, strukturu souborů a ověřitelná kritéria — Claude implementoval kód, spouštěl typovou kontrolu a lint, a odškrtával splněná kritéria.
+
+Tento přístup odděluje **návrh architektury** (task definice, konvence projektu) od **implementace** a umožňuje iterativní vývoj s jasně ověřitelným výstupem.
+
 ## API
 
 Data jsou načítána z [Open-Meteo](https://open-meteo.com/) — bez nutnosti API klíče.
