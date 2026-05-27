@@ -18,19 +18,19 @@ Vznikne nová `Layout` komponenta, která obalí všechny screeny a zobrazí `Ge
 ## Akceptační kritéria
 
 ### Layout
-- [ ] `Layout` renderuje `GeolocationSearch` nad `{children}`
-- [ ] `App.tsx` obaluje obsah routes v `Layout`
-- [ ] `GeolocationSearch` je viditelný na `WeatherScreen` i `DayDetailScreen`
+- [x] `Layout` renderuje `GeolocationSearch` nad `{children}`
+- [x] `App.tsx` obaluje obsah routes v `Layout`
+- [x] `GeolocationSearch` je viditelný na `WeatherScreen` i `DayDetailScreen`
 
 ### useWeather
-- [ ] `latitude` a `longitude` čte z `useGeolocationStore`
-- [ ] Při změně lokace ve store se data znovu načtou (koordináty jsou v `useCallback` deps)
-- [ ] Hardcoded `50.08, 14.42` odstraněno
+- [x] `latitude` a `longitude` čte z `useGeolocationStore`
+- [x] Při změně lokace ve store se data znovu načtou (koordináty jsou v `useCallback` deps)
+- [x] Hardcoded `50.08, 14.42` odstraněno
 
 ### useDayDetail
-- [ ] Stejná změna jako `useWeather`
-- [ ] Hardcoded `50.08, 14.42` odstraněno
+- [x] Stejná změna jako `useWeather`
+- [x] Hardcoded `50.08, 14.42` odstraněno
 
 ### Výchozí stav
-- [ ] Při prvním načtení aplikace se použijí koordináty Prahy z `geolocationStore` výchozí hodnoty
-- [ ] Počasí se načte automaticky bez nutnosti vybrat lokaci
+- [x] Při prvním načtení aplikace se použijí koordináty Prahy z `geolocationStore` výchozí hodnoty
+- [x] Počasí se načte automaticky bez nutnosti vybrat lokaci

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { weatherApi } from '~/module/api/openMeteoClient'
+import { useGeolocationStore } from '~/module/geolocation/stores/geolocationStore'
 import { MinutelyResponse } from '../types/MinutelyResponse'
 import { MinutelySummary } from '../types/MinutelySummary'
 import { toMinutelySummary } from '../mappers/toMinutelySummary'
@@ -24,9 +25,12 @@ export const useDayDetail = (date: string) => {
   const [data, setData] = useState<MinutelyResponse | null>(null)
   const [summary, setSummary] = useState<MinutelySummary | null>(null)
   const [temperatureChart, setTemperatureChart] = useState<TemperatureChartPoint[] | null>(null)
-  const [precipitationChart, setPrecipitationChart] = useState<PrecipitationChartPoint[] | null>(null)
+  const [precipitationChart, setPrecipitationChart] = useState<PrecipitationChartPoint[] | null>(
+    null
+  )
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
+  const { location } = useGeolocationStore()
 
   const getDayDetail = useCallback(async () => {
     setIsLoading(true)
@@ -34,8 +38,8 @@ export const useDayDetail = (date: string) => {
 
     try {
       const response = await weatherApi.get<MinutelyResponse>('forecast', {
-        latitude: 50.08,
-        longitude: 14.42,
+        latitude: location.latitude,
+        longitude: location.longitude,
         minutely_15: MINUTELY_FIELDS,
         start_minutely_15: `${date}T00:00`,
         end_minutely_15: `${date}T23:45`,
@@ -53,7 +57,7 @@ export const useDayDetail = (date: string) => {
     } finally {
       setIsLoading(false)
     }
-  }, [date])
+  }, [date, location.latitude, location.longitude])
 
   useEffect(() => {
     getDayDetail().catch(console.error)

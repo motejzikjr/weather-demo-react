@@ -6,6 +6,7 @@ import { WeatherResponse } from '../types/WeatherResponse'
 import { CurrentWeather } from '../types/CurrentWeather'
 import { DailyForecast } from '../types/DailyForecast'
 import { useWeatherStore } from '../stores/weatherStore'
+import { useGeolocationStore } from '~/module/geolocation/stores/geolocationStore'
 
 interface WeatherData {
   current: CurrentWeather
@@ -17,6 +18,7 @@ export const useWeather = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
   const { updateCurrentTemperature } = useWeatherStore()
+  const { location } = useGeolocationStore()
 
   const getWeather = useCallback(async () => {
     setIsLoading(true)
@@ -24,8 +26,8 @@ export const useWeather = () => {
 
     try {
       const data = await weatherApi.get<WeatherResponse>('forecast', {
-        latitude: 50.08,
-        longitude: 14.42,
+        latitude: location.latitude,
+        longitude: location.longitude,
         current: 'temperature_2m,windspeed_10m',
         daily: 'weathercode,temperature_2m_max,temperature_2m_min',
         forecast_days: 7,
@@ -48,7 +50,7 @@ export const useWeather = () => {
     } finally {
       setIsLoading(false)
     }
-  }, [updateCurrentTemperature])
+  }, [updateCurrentTemperature, location.latitude, location.longitude])
 
   useEffect(() => {
     getWeather().catch(console.error)
