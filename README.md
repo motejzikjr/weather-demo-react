@@ -1,14 +1,14 @@
 # Weather Demo React
 
-React app displaying current weather and forecasts using the [Open-Meteo API](https://open-meteo.com/). Supports location search with autocomplete powered by the Open-Meteo Geocoding API.
+React aplikace zobrazující aktuální počasí a předpověď pomocí [Open-Meteo API](https://open-meteo.com/). Podporuje vyhledávání míst s našeptávačem napojením na Open-Meteo Geocoding API.
 
 **Live demo:** https://motejzikjr.github.io/weather-demo-react/#/weather
 
-## Features
+## Funkce
 
-- Current weather conditions and 7-day forecast
-- Location search with autocomplete (geocoding)
-- Day detail view with 15-minute resolution temperature and precipitation charts
+- Aktuální počasí a 7denní předpověď
+- Vyhledávání míst s našeptávačem (geokódování)
+- Detail dne s grafy teploty a srážek v 15minutovém rozlišení
 
 ## Tech stack
 
@@ -17,58 +17,58 @@ React app displaying current weather and forecasts using the [Open-Meteo API](ht
 - Tailwind CSS 4, Sass
 - Recharts 3
 
-## Prerequisites
+## Prerekvizity
 
-- Node.js >= 22 (see `.nvmrc`)
+- Node.js >= 22 (viz `.nvmrc`)
 
-## Getting started
+## Spuštění
 
 ```bash
 npm install
 npm run dev
 ```
 
-App runs at `http://localhost:5173`.
+Aplikace běží na `http://localhost:5173`.
 
-## Scripts
+## Skripty
 
-| Command | Description |
+| Příkaz | Popis |
 |---|---|
-| `npm run dev` | Start dev server |
-| `npm run build` | Type-check and build for production |
-| `npm run typecheck` | TypeScript check without emit |
+| `npm run dev` | Spustí dev server |
+| `npm run build` | Typová kontrola a build pro produkci |
+| `npm run typecheck` | TypeScript kontrola bez emitu |
 | `npm run lint` | ESLint |
-| `npm run lint:fix` | ESLint with auto-fix |
+| `npm run lint:fix` | ESLint s automatickými opravami |
 | `npm run format` | Prettier |
 
-## Project structure
+## Struktura projektu
 
 ```
 src/
   App.tsx                          # Routes (HashRouter): /weather, /weather/day/:date
-  Layout.tsx                       # App shell with location search
+  Layout.tsx                       # App shell s vyhledáváním míst
   module/
-    geolocation/                   # Location search feature
+    geolocation/                   # Feature vyhledávání míst
       components/GeolocationSearch.tsx
       hooks/useGeolocation.ts
       mappers/toGeocodingSuggestions.ts
       stores/geolocationStore.ts
       types/
-    weather/                       # Weather data feature
+    weather/                       # Feature dat počasí
       components/
       hooks/useWeather.ts, useDayDetail.ts
       mappers/
       stores/weatherStore.ts
       types/
-    api/openMeteoClient.ts         # Fetch wrapper for Open-Meteo APIs
-  ui/                              # Isolated, reusable UI components
-  styles/settings/                 # SCSS variables (colors, spacing)
+    api/openMeteoClient.ts         # Fetch wrapper pro Open-Meteo API
+  ui/                              # Izolované znovupoužitelné UI komponenty
+  styles/settings/                 # SCSS proměnné (barvy, spacing)
   utils/                           # formatDate, formatDateTime
 ```
 
 ## API
 
-Data is fetched from [Open-Meteo](https://open-meteo.com/) — no API key required.
+Data jsou načítána z [Open-Meteo](https://open-meteo.com/) — bez nutnosti API klíče.
 
-- **Forecast API** (`api.open-meteo.com/v1/forecast`) — daily and 15-minute weather data
-- **Geocoding API** (`geocoding-api.open-meteo.com/v1/search`) — location search
+- **Forecast API** (`api.open-meteo.com/v1/forecast`) — denní a 15minutová data počasí
+- **Geocoding API** (`geocoding-api.open-meteo.com/v1/search`) — vyhledávání míst
