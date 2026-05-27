@@ -35,6 +35,7 @@ src/ui/Autocomplete/
 - [ ] Soubory odpovídají struktuře výše
 - [ ] Komponenty jsou arrow funkce s const exportem, props interface inline
 - [ ] `npm run typecheck` hlásí 0 chyb
+- [ ] `npm run lint` hlásí 0 chyb
 
 ### Zobrazení
 - [ ] Dropdown je skrytý pokud `value` je prázdný string

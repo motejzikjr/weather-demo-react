@@ -7,12 +7,13 @@ Vytvoření UI komponenty `InputText` v `src/ui/InputText/`. Komponenta obaluje 
 ## Akceptační kritéria
 
 ### Struktura
-- [ ] Soubory: `src/ui/InputText/InputText.tsx` + `src/ui/InputText/InputText.scss`
-- [ ] Props interface rozšiřuje `ComponentPropsWithoutRef<'input'>`, je definován inline v souboru komponenty
-- [ ] Komponenta je arrow funkce s const exportem
-- [ ] `npm run typecheck` hlásí 0 chyb
+- [x] Soubory: `src/ui/InputText/InputText.tsx` + `src/ui/InputText/InputText.scss`
+- [x] Props interface rozšiřuje `ComponentPropsWithoutRef<'input'>`, je definován inline v souboru komponenty
+- [x] Komponenta je arrow funkce s const exportem
+- [x] `npm run typecheck` hlásí 0 chyb
+- [x] `npm run lint` hlásí 0 chyb
 
 ### Chování
-- [ ] Renderuje nativní `<input>` element
-- [ ] Všechny předané props jsou spreadnuty na `<input>` (`...props`)
-- [ ] `placeholder`, `type`, `onChange`, `value`, `disabled` fungují bez dodatečné konfigurace
+- [x] Renderuje nativní `<input>` element
+- [x] Všechny předané props jsou spreadnuty na `<input>` (`...props`)
+- [x] `placeholder`, `type`, `onChange`, `value`, `disabled` fungují bez dodatečné konfigurace

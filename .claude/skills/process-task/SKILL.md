@@ -24,11 +24,11 @@ Přečti `## Cíl` a `## Akceptační kritéria`. Pokud zadání odkazuje na jin
 ### 2. Implementuj
 Implementuj feature podle akceptačních kritérií. Dodržuj konvence projektu z pravidel (arrow funkce, inline props, BEM naming, atd.).
 
-### 3. Zkontroluj TypeScript
-Spusť `npm run typecheck`. Oprav všechny chyby před pokračováním.
+### 3. Zkontroluj TypeScript a lint
+Spusť `npm run typecheck` a `npm run lint`. Oprav všechny chyby před pokračováním.
 
 ### 4. Odškrtni kritéria
 V task souboru nahraď `- [ ]` za `- [x]` u každého splněného kritéria.
 
 ### 5. Shrnutí
-Stručně reportuj: co vzniklo, které soubory byly vytvořeny nebo upraveny, zda typecheck prošel.
+Stručně reportuj: co vzniklo, které soubory byly vytvořeny nebo upraveny, zda typecheck a lint prošly.

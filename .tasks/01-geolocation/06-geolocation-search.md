@@ -20,6 +20,7 @@ src/module/geolocation/components/GeolocationSearch.tsx
 - [ ] Soubor existuje na správné cestě
 - [ ] Arrow funkce, const export, žádné props
 - [ ] `npm run typecheck` hlásí 0 chyb
+- [ ] `npm run lint` hlásí 0 chyb
 
 ### Propojení s Autocomplete
 - [ ] Položky jsou mapovány ze `suggestions`: `{ name: "${s.name}, ${s.country}", value: JSON.stringify(s) }`

@@ -51,6 +51,7 @@ interface GeocodingSuggestion {
 - [ ] Soubory odpovídají struktuře výše
 - [ ] Dodrženy konvence modulu (arrow funkce, const export, optional fields v response typu)
 - [ ] `npm run typecheck` hlásí 0 chyb
+- [ ] `npm run lint` hlásí 0 chyb
 
 ### Hook `useGeolocation`
 - [ ] Exportuje `{ suggestions, isLoading, error, search }`
