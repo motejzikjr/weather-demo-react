@@ -36,11 +36,11 @@ const DEFAULT_LOCATION: GeocodingSuggestion = {
 ## Akceptační kritéria
 
 ### Struktura
-- [ ] Soubor existuje na správné cestě
-- [ ] Dodržen vzor z `weatherStore.ts` (arrow funkce, const export)
-- [ ] `npm run typecheck` hlásí 0 chyb
-- [ ] `npm run lint` hlásí 0 chyb
+- [x] Soubor existuje na správné cestě
+- [x] Dodržen vzor z `weatherStore.ts` (arrow funkce, const export)
+- [x] `npm run typecheck` hlásí 0 chyb
+- [x] `npm run lint` hlásí 0 chyb
 
 ### Chování
-- [ ] Výchozí stav obsahuje Praha s koordináty `50.08, 14.42`
-- [ ] `setLocation(suggestion)` nahradí celou lokaci novými daty
+- [x] Výchozí stav obsahuje Praha s koordináty `50.08, 14.42`
+- [x] `setLocation(suggestion)` nahradí celou lokaci novými daty
