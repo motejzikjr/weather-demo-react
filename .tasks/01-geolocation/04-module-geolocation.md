@@ -48,17 +48,17 @@ interface GeocodingSuggestion {
 ## Akceptační kritéria
 
 ### Struktura
-- [ ] Soubory odpovídají struktuře výše
-- [ ] Dodrženy konvence modulu (arrow funkce, const export, optional fields v response typu)
-- [ ] `npm run typecheck` hlásí 0 chyb
-- [ ] `npm run lint` hlásí 0 chyb
+- [x] Soubory odpovídají struktuře výše
+- [x] Dodrženy konvence modulu (arrow funkce, const export, optional fields v response typu)
+- [x] `npm run typecheck` hlásí 0 chyb
+- [x] `npm run lint` hlásí 0 chyb
 
 ### Hook `useGeolocation`
-- [ ] Exportuje `{ suggestions, isLoading, error, search }`
-- [ ] `search(query: string)` volá API a aktualizuje `suggestions`
-- [ ] Při chybě nastaví `error`, `suggestions` zůstane prázdné pole
-- [ ] Při novém volání `search` resetuje předchozí `error`
+- [x] Exportuje `{ suggestions, isLoading, error, search }`
+- [x] `search(query: string)` volá API a aktualizuje `suggestions`
+- [x] Při chybě nastaví `error`, `suggestions` zůstane prázdné pole
+- [x] Při novém volání `search` resetuje předchozí `error`
 
 ### Mapper `toGeocodingSuggestions`
-- [ ] Čistá funkce `(data: GeocodingResponse) => GeocodingSuggestion[]`
-- [ ] Položky kde chybí `name`, `latitude` nebo `longitude` jsou vynechány
+- [x] Čistá funkce `(data: GeocodingResponse) => GeocodingSuggestion[]`
+- [x] Položky kde chybí `name`, `latitude` nebo `longitude` jsou vynechány
